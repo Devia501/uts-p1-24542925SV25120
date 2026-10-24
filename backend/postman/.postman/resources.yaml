@@ -1,0 +1,7 @@
+# Use this workspace to collaborate
+workspace:
+  id: 48efd3ca-c377-4368-8ef8-fac9d090c986
+
+localResources:
+  collections:
+    - ../Inventaris API

@@ -1,0 +1,18 @@
+$kind: http-request
+url: "{{base_url}}/login"
+method: POST
+headers:
+  Accept: application/json
+  Content-Type: application/json
+body:
+  type: text
+  content: '{"email":"admin@example.com","password":"password"}'
+auth:
+  type: noauth
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('Status 200', () => pm.response.to.have.status(200));
+      pm.collectionVariables.set('token', pm.response.json().token);
+    language: text/javascript
+order: 1000

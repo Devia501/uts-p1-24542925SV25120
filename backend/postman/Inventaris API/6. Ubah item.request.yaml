@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{base_url}}/items/{{item_id}}"
+method: PUT
+headers:
+  Accept: application/json
+  Content-Type: application/json
+body:
+  type: text
+  content: '{"name":"Laptop Updated","quantity":10}'
+scripts:
+  - type: afterResponse
+    code: pm.test('Status 200', () => pm.response.to.have.status(200));
+    language: text/javascript
+order: 6000

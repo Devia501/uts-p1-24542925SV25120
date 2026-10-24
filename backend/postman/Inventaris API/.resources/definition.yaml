@@ -1,0 +1,13 @@
+$kind: collection
+description: ""
+variables:
+  base_url: http://127.0.0.1:8000/api
+  token: ""
+  item_id: ""
+  sku: ""
+auth:
+  - id: fad7ee45-fc85-4f16-a183-4baf12e979ad
+    type: bearer
+    name: bearer auth
+    credentials:
+      token: "{{token}}"
